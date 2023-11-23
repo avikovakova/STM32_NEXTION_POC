@@ -60,8 +60,8 @@ all: main-build
 main-build: UART_NEXTION_POC_NUCLEO-H743ZI2.elf secondary-outputs
 
 # Tool invocations
-UART_NEXTION_POC_NUCLEO-H743ZI2.elf UART_NEXTION_POC_NUCLEO-H743ZI2.map: $(OBJS) $(USER_OBJS) C:\Users\aviko\Documents\CodeProjects\STM32_Workspace\UART_NEXTION_POC_NUCLEO-H743ZI2\STM32H743ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "UART_NEXTION_POC_NUCLEO-H743ZI2.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\aviko\Documents\CodeProjects\STM32_Workspace\UART_NEXTION_POC_NUCLEO-H743ZI2\STM32H743ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_NEXTION_POC_NUCLEO-H743ZI2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+UART_NEXTION_POC_NUCLEO-H743ZI2.elf UART_NEXTION_POC_NUCLEO-H743ZI2.map: $(OBJS) $(USER_OBJS) C:\Users\aviko\Documents\CodeProjects\STM32_Workspace\STM32_NEXTION_POC\UART_NEXTION_POC_NUCLEO-H743ZI2\STM32H743ZITX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "UART_NEXTION_POC_NUCLEO-H743ZI2.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m7 -T"C:\Users\aviko\Documents\CodeProjects\STM32_Workspace\STM32_NEXTION_POC\UART_NEXTION_POC_NUCLEO-H743ZI2\STM32H743ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_NEXTION_POC_NUCLEO-H743ZI2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
